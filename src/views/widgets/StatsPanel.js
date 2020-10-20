@@ -10,7 +10,6 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import ChartLineSimple from '../charts/ChartLineSimple'
-import ChartBarSimple from '../charts/ChartBarSimple'
 
 const StatsPanel = () => {
   // render
@@ -38,14 +37,45 @@ const StatsPanel = () => {
               <CIcon name="cil-settings"/>
             </CDropdownToggle>
             <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Action</CDropdownItem>
-              <CDropdownItem>Another action</CDropdownItem>
-              <CDropdownItem>Something else here...</CDropdownItem>
-              <CDropdownItem disabled>Disabled action</CDropdownItem>
+              <CDropdownItem>Associar Escala</CDropdownItem>
+              <CDropdownItem>Imprimir Escala</CDropdownItem>
+              <CDropdownItem>Exportar</CDropdownItem>
+              <CDropdownItem>Importar</CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
         </CWidgetDropdown>
       </CCol>
+      <CCol sm="6" lg="3">
+        <CWidgetDropdown
+          color="gradient-success"
+          header="8/95"
+          text="Motoristas Livre"
+          footerSlot={
+            <ChartLineSimple
+              pointed
+              className="mt-3 mx-3"
+              style={{height: '70px'}}
+              dataPoints={[9, 12, 11, 15, 3, 5, 8]}
+              pointHoverBackgroundColor="#2eb85c"
+              label="Motoristas"
+              labels="months"
+            />
+          }
+        >
+          <CDropdown>
+            <CDropdownToggle caret className="text-white" color="transparent">
+              <CIcon name="cil-settings"/>
+            </CDropdownToggle>
+            <CDropdownMenu className="pt-0" placement="bottom-end">
+              <CDropdownItem>Associar Escala</CDropdownItem>
+              <CDropdownItem>Imprimir Escala</CDropdownItem>
+              <CDropdownItem>Exportar</CDropdownItem>
+              <CDropdownItem>Importar</CDropdownItem>
+            </CDropdownMenu>
+          </CDropdown>
+        </CWidgetDropdown>
+      </CCol>
+
 
       <CCol sm="6" lg="3">
         <CWidgetDropdown
@@ -70,10 +100,10 @@ const StatsPanel = () => {
               <CIcon name="cil-location-pin"/>
             </CDropdownToggle>
             <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Action</CDropdownItem>
-              <CDropdownItem>Another action</CDropdownItem>
-              <CDropdownItem>Something else here...</CDropdownItem>
-              <CDropdownItem disabled>Disabled action</CDropdownItem>
+              <CDropdownItem>Associar Escala</CDropdownItem>
+              <CDropdownItem>Imprimir Escala</CDropdownItem>
+              <CDropdownItem>Exportar</CDropdownItem>
+              <CDropdownItem>Importar</CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
         </CWidgetDropdown>
@@ -102,39 +132,10 @@ const StatsPanel = () => {
               <CIcon name="cil-settings"/>
             </CDropdownToggle>
             <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Action</CDropdownItem>
-              <CDropdownItem>Another action</CDropdownItem>
-              <CDropdownItem>Something else here...</CDropdownItem>
-              <CDropdownItem disabled>Disabled action</CDropdownItem>
-            </CDropdownMenu>
-          </CDropdown>
-        </CWidgetDropdown>
-      </CCol>
-
-      <CCol sm="6" lg="3">
-        <CWidgetDropdown
-          color="gradient-danger"
-          header="8/95"
-          text="Motoristas Livre"
-          footerSlot={
-            <ChartBarSimple
-              className="mt-3 mx-3"
-              style={{height: '70px'}}
-              backgroundColor="rgb(250, 152, 152)"
-              label="Motoristas"
-              labels="months"
-            />
-          }
-        >
-          <CDropdown>
-            <CDropdownToggle caret className="text-white" color="transparent">
-              <CIcon name="cil-settings"/>
-            </CDropdownToggle>
-            <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Action</CDropdownItem>
-              <CDropdownItem>Another action</CDropdownItem>
-              <CDropdownItem>Something else here...</CDropdownItem>
-              <CDropdownItem disabled>Disabled action</CDropdownItem>
+              <CDropdownItem>Associar Escala</CDropdownItem>
+              <CDropdownItem>Imprimir Escala</CDropdownItem>
+              <CDropdownItem>Exportar</CDropdownItem>
+              <CDropdownItem>Importar</CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
         </CWidgetDropdown>

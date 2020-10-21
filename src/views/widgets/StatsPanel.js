@@ -25,7 +25,7 @@ const StatsPanel = () => {
               pointed
               className="c-chart-wrapper mt-3 mx-3"
               style={{height: '70px'}}
-              dataPoints={[65, 59, 84, 84, 51, 55, 40]}
+              dataPoints={[86, 83, 84, 80, 92, 90, 87]}
               pointHoverBackgroundColor="primary"
               label="Motorista"
               labels="months"
@@ -87,7 +87,7 @@ const StatsPanel = () => {
               pointed
               className="mt-3 mx-3"
               style={{height: '70px'}}
-              dataPoints={[1, 18, 9, 17, 34, 22, 11]}
+              dataPoints={[15, 8, 53, 69, 65, 58, 61]}
               pointHoverBackgroundColor="info"
               options={{ elements: { line: { tension: 0.00001 }}}}
               label="Rotas"

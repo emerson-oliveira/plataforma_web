@@ -37,14 +37,14 @@ const Typography = React.lazy(() => import('./views/theme/typography/Typography'
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'));
 const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
-const Timesheet = React.lazy(() => import('./views/pages/timesheet/Timesheet'));
+const Timesheet = React.lazy(() => import('./views/pages/timesheet/dashboard/Timesheet'));
 const Drivers = React.lazy(() => import('./views/pages/timesheet/drivers/Drivers'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
-  { path: '/timesheet', name: 'Timesheet', component: Timesheet },
-  { path: '/timesheet/drivers', name: 'Drivers', component: Drivers, exact: true },
+  { path: '/timesheet', name: 'Timesheet', component: Timesheet, exact: true},
+  { path: '/timesheet/drivers', name: 'Drivers', component: Drivers },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },

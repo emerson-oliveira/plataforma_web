@@ -12,16 +12,23 @@ import {
   CTabPane
 } from '@coreui/react'
 
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
+import 'devexpress-gantt/dist/dx-gantt.css'
+import 'devexpress-diagram/dist/dx-diagram'
+import 'devexpress-gantt/dist/dx-gantt'
+
+const WidgetsGantt = lazy(() => import('../../../widgets/WidgetsGantt'))
 const StatsPanel = lazy(() => import('../../../widgets/StatsPanel'))
 
 const Drivers = () => {
   return (
     <>
       <StatsPanel />
+
       <CRow>
-        <CCol sm="5">
-          <h4 id="traffic" className="card-title mb-0">Traffic</h4>
-          <div className="small text-muted">November 2017</div>
+        <CCol >
+          <WidgetsGantt />
         </CCol>
       </CRow>
       <CCard>
@@ -39,11 +46,6 @@ const Drivers = () => {
           <CNavItem>
             <CNavLink data-tab="worked-hours">
               Horas Trabalhadas
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink data-tab="messages">
-              Messages
             </CNavLink>
           </CNavItem>
         </CNav>

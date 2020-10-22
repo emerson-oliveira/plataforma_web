@@ -8,8 +8,12 @@ import {
   CDropdownItem,
   CDropdownToggle
 } from '@coreui/react'
+
 import CIcon from '@coreui/icons-react'
 import ChartLineSimple from '../charts/ChartLineSimple'
+
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
 
 const StatsPanel = () => {
   // render

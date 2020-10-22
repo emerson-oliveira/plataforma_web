@@ -33,6 +33,10 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "classnames": "^2.2.6",
     "core-js": "^3.6.5",
+    "devexpress-diagram": "^1.0.17",
+    "devexpress-gantt": "^1.0.10",
+    "devextreme": "20.1-stable",
+    "devextreme-react": "20.1-stable",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "node-sass": "^4.14.1",
@@ -42,9 +46,7 @@
     "react-dom": "^16.13.1",
     "react-redux": "7.2.0",
     "react-router-dom": "^5.2.0",
-    "redux": "4.0.5",
-    "devextreme": "20.1-stable",
-    "devextreme-react": "20.1-stable"
+    "redux": "4.0.5"
   },
   "devDependencies": {
     "devextreme-cldr-data": "^1.0.3",

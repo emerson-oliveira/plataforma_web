@@ -1,9 +1,9 @@
 import React, { lazy } from 'react'
 import { CCard, CCardBody } from '@coreui/react'
 
-import WidgetScheduler from '../../../views/widgets/WidgetScheduler'
+import WidgetScheduler from '../../../widgets/WidgetScheduler'
 
-const StatsPanel = lazy(() => import('../../../views/widgets/StatsPanel'))
+const StatsPanel = lazy(() => import('../../../widgets/StatsPanel'))
 
 const Timesheet = () => {
   return (

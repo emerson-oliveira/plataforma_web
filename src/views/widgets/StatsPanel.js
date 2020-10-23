@@ -21,7 +21,7 @@ const StatsPanel = () => {
     <CRow>
       <CCol sm="6" lg="3">
         <CWidgetDropdown
-          color="gradient-primary"
+          color="gradient-info"
           header="87/95"
           text="Motoristas Escalado"
           footerSlot={
@@ -30,7 +30,7 @@ const StatsPanel = () => {
               className="c-chart-wrapper mt-3 mx-3"
               style={{height: '70px'}}
               dataPoints={[86, 83, 84, 80, 92, 90, 87]}
-              pointHoverBackgroundColor="primary"
+              pointHoverBackgroundColor="info"
               label="Motorista"
               labels="months"
             />
@@ -80,39 +80,6 @@ const StatsPanel = () => {
         </CWidgetDropdown>
       </CCol>
 
-
-      <CCol sm="6" lg="3">
-        <CWidgetDropdown
-          color="gradient-info"
-          header="61/61"
-          text="Rotas Escaladas"
-          footerSlot={
-            <ChartLineSimple
-              pointed
-              className="mt-3 mx-3"
-              style={{height: '70px'}}
-              dataPoints={[15, 8, 53, 69, 65, 58, 61]}
-              pointHoverBackgroundColor="info"
-              options={{ elements: { line: { tension: 0.00001 }}}}
-              label="Rotas"
-              labels="months"
-            />
-          }
-        >
-          <CDropdown>
-            <CDropdownToggle caret={false} color="transparent">
-              <CIcon name="cil-location-pin"/>
-            </CDropdownToggle>
-            <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Associar Escala</CDropdownItem>
-              <CDropdownItem>Imprimir Escala</CDropdownItem>
-              <CDropdownItem>Exportar</CDropdownItem>
-              <CDropdownItem>Importar</CDropdownItem>
-            </CDropdownMenu>
-          </CDropdown>
-        </CWidgetDropdown>
-      </CCol>
-
       <CCol sm="6" lg="3">
         <CWidgetDropdown
           color="gradient-warning"
@@ -134,6 +101,38 @@ const StatsPanel = () => {
           <CDropdown>
             <CDropdownToggle color="transparent">
               <CIcon name="cil-settings"/>
+            </CDropdownToggle>
+            <CDropdownMenu className="pt-0" placement="bottom-end">
+              <CDropdownItem>Associar Escala</CDropdownItem>
+              <CDropdownItem>Imprimir Escala</CDropdownItem>
+              <CDropdownItem>Exportar</CDropdownItem>
+              <CDropdownItem>Importar</CDropdownItem>
+            </CDropdownMenu>
+          </CDropdown>
+        </CWidgetDropdown>
+      </CCol>
+
+      <CCol sm="6" lg="3">
+        <CWidgetDropdown
+          color="gradient-danger"
+          header="61/61"
+          text="Rotas Escaladas"
+          footerSlot={
+            <ChartLineSimple
+              pointed
+              className="mt-3 mx-3"
+              style={{height: '70px'}}
+              dataPoints={[15, 8, 53, 69, 65, 58, 61]}
+              pointHoverBackgroundColor="danger"
+              options={{ elements: { line: { tension: 0.00001 }}}}
+              label="Rotas"
+              labels="months"
+            />
+          }
+        >
+          <CDropdown>
+            <CDropdownToggle caret={false} color="transparent">
+              <CIcon name="cil-location-pin"/>
             </CDropdownToggle>
             <CDropdownMenu className="pt-0" placement="bottom-end">
               <CDropdownItem>Associar Escala</CDropdownItem>

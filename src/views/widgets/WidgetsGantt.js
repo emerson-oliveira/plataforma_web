@@ -23,12 +23,9 @@ import { locale } from "devextreme/localization";
 import {
   CCol,
   CInput,
-  CInputGroupAppend,
   CLabel,
   CRow
 } from '@coreui/react';
-
-import CIcon from '@coreui/icons-react';
 
 const itensScale = [
   {
@@ -82,27 +79,20 @@ class WidgetsGantt extends React.Component {
                 onValueChanged={this.onScaleTypeChanged}
               />
           </CCol>
-          <CCol md="6" >
-            <CRow className="d-flex align-items-end">
-              <CCol md="6">
-                <CheckBox
+          <CCol md="6" className="d-flex align-items-end justify-content-between">
+            <CheckBox
+                  className="col-md-6"
                   text="Exibir recursos"
                   value={showResources}
                   onValueChanged={this.onShowResourcesChanged}
                 />
-              </CCol>
-              <CCol md="6">
                 <CInput
+                  className="col-md-6"
                   type="text"
                   id="search"
                   name="search"
-                  placeholder="Pesquisar"
+                  placeholder="Pesquisar..."
                 />
-                <span className="glyphicon glyphicon-search"></span>
-              </CCol>
-            </CRow>
-
-
           </CCol>
         </CRow>
         <div className="widget-container">
@@ -111,8 +101,9 @@ class WidgetsGantt extends React.Component {
             height={700}
             taskTitlePosition={taskTitlePosition}
             scaleType={scaleType}
-            showResources={showResources}>
-
+            showResources={showResources}
+            defaultExpandedRowKeys={1}
+            >
 
             <Tasks
             dataSource={tasks}

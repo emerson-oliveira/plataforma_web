@@ -15,7 +15,7 @@ export const tasks = [
     start: new Date("2019-02-21T05:00:00.000Z"),
     end: new Date("2019-02-28T09:00:00.000Z"),
     progress: 65,
-    taskColor: '#321fdb'
+    taskColor: '#39f'
   },{
   id: 3,
   parentId: 2,
@@ -47,10 +47,10 @@ export const tasks = [
   id: 8,
   parentId: 1,
   title: "Motorista Ocioso",
-  start: new Date("2019-02-21T10:00:00.000Z"),
+  start: new Date("2019-02-21T05:00:00.000Z"),
   end: new Date("2019-02-28T09:00:00.000Z"),
   progress: 30,
-  taskColor: '#f9b115'
+  taskColor: '#f6960b'
 },
 {
   id: 9,
@@ -74,10 +74,10 @@ export const tasks = [
   id: 11,
   parentId: 1,
   title: "Motorista de Folga",
-  start: new Date("2019-02-21T10:00:00.000Z"),
+  start: new Date("2019-02-21T05:00:00.000Z"),
   end: new Date("2019-02-28T09:00:00.000Z"),
   progress: 10,
-  taskColor: '#39f'
+  taskColor: '#24ab4c'
 },
 {
   id: 12,

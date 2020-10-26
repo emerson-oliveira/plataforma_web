@@ -2,24 +2,19 @@ import React from 'react';
 
 import Gantt, {
   Tasks,
-  Dependencies,
-  Resources,
-  ResourceAssignments,
   Column,
-  Editing
+  Editing,
+  Toolbar,
+  Item
 } from 'devextreme-react/gantt';
 
 import CheckBox from 'devextreme-react/check-box';
 import SelectBox from 'devextreme-react/select-box';
 
-import {
-  tasks,
-  dependencies,
-  resources,
-  resourceAssignments
-} from '../../services/database/dataGantt';
+import { tasks } from '../../services/database/dataGantt';
 
 import { locale } from "devextreme/localization";
+
 import {
   CCol,
   CInput,
@@ -69,7 +64,7 @@ class WidgetsGantt extends React.Component {
     return (
       <div id="form-demo">
         <CRow className="pb-3">
-          <CCol md="6">
+          <CCol md="3">
             <CLabel>Exibir Escala</CLabel>
               <SelectBox
                 dataSource={itensScale}
@@ -97,12 +92,12 @@ class WidgetsGantt extends React.Component {
         </CRow>
         <div className="widget-container">
           <Gantt
+            elementAttr={this.ganttAttributes}
             taskListWidth={500}
             height={700}
             taskTitlePosition={taskTitlePosition}
             scaleType={scaleType}
             showResources={showResources}
-            defaultExpandedRowKeys={1}
             >
 
             <Tasks
@@ -110,13 +105,17 @@ class WidgetsGantt extends React.Component {
             colorExpr="taskColor"
             acessKey={1}
             />
-            <Dependencies dataSource={dependencies} />
-            <Resources dataSource={resources} />
-            <ResourceAssignments dataSource={resourceAssignments} />
 
             <Column dataField="title" caption="Motorista" width={300} />
             <Column dataField="start" caption="Data Inicial" />
             <Column dataField="end" caption="Data Final" />
+
+            <Toolbar id="barra-superior">
+                <Item name="collapseAll" />
+                <Item name="expandAll" />
+                <Item name="zoomIn" />
+                <Item name="zoomOut" />
+            </Toolbar>
 
             <Editing enabled={false} />
           </Gantt>

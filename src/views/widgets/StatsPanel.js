@@ -41,7 +41,9 @@ const StatsPanel = () => {
               <CIcon name="cil-settings"/>
             </CDropdownToggle>
             <CDropdownMenu className="pt-0" placement="bottom-end">
-              <CDropdownItem>Associar Escala</CDropdownItem>
+              <CDropdownItem>
+                Associar Escala
+              </CDropdownItem>
               <CDropdownItem>Imprimir Escala</CDropdownItem>
               <CDropdownItem>Exportar</CDropdownItem>
               <CDropdownItem>Importar</CDropdownItem>

@@ -8,7 +8,6 @@ import Gantt, {
   Item
 } from 'devextreme-react/gantt';
 
-import CheckBox from 'devextreme-react/check-box';
 import SelectBox from 'devextreme-react/select-box';
 
 import { tasks } from '../../services/database/dataGantt';
@@ -21,6 +20,7 @@ import {
   CLabel,
   CRow
 } from '@coreui/react';
+import DateRange from './DateRange';
 
 const itensScale = [
   {
@@ -74,15 +74,11 @@ class WidgetsGantt extends React.Component {
                 onValueChanged={this.onScaleTypeChanged}
               />
           </CCol>
-          <CCol md="6" className="d-flex align-items-end justify-content-between">
-            <CheckBox
-                  className="col-md-6"
-                  text="Exibir recursos"
-                  value={showResources}
-                  onValueChanged={this.onShowResourcesChanged}
-                />
+          <CCol md="6" className="d-flex align-items-end">
+            <DateRange />
+          </CCol>
+          <CCol md="3" className="d-flex align-items-end justify-content-between">
                 <CInput
-                  className="col-md-6"
                   type="text"
                   id="search"
                   name="search"

@@ -1,7 +1,5 @@
 import React, { lazy } from 'react'
 import {
-  CCard,
-  CCardBody,
   CTabs,
   CNav,
   CNavItem,
@@ -12,18 +10,17 @@ import {
 
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
-import 'devexpress-gantt/dist/dx-gantt.css'
-import 'devexpress-diagram/dist/dx-diagram'
-import 'devexpress-gantt/dist/dx-gantt'
+import 'devexpress-gantt/dist/dx-gantt.css';
+
 
 const WidgetsGantt = lazy(() => import('../../../widgets/WidgetsGantt'))
 const StatsPanel = lazy(() => import('../../../widgets/StatsPanel'))
 
 const Drivers = () => {
-  return (
-    <>
 
-      <CTabs activeTab="drivers">
+  return (
+    <div id="page-drivers">
+        <CTabs activeTab="drivers">
         <CNav variant="tabs" className="mb-4">
           <CNavItem>
             <CNavLink data-tab="drivers">
@@ -67,12 +64,11 @@ const Drivers = () => {
             <WidgetsGantt />
           </CTabPane>
           <CTabPane data-tab="worked-hours">
-            Horas trabalhadas aqui
           </CTabPane>
         </CTabContent>
       </CTabs>
 
-    </>
+    </div>
   )
 }
 

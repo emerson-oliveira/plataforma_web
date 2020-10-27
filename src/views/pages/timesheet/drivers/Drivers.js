@@ -2,8 +2,6 @@ import React, { lazy } from 'react'
 import {
   CCard,
   CCardBody,
-  CRow,
-  CCol,
   CTabs,
   CNav,
   CNavItem,
@@ -24,20 +22,34 @@ const StatsPanel = lazy(() => import('../../../widgets/StatsPanel'))
 const Drivers = () => {
   return (
     <>
-      <StatsPanel />
 
-      <CRow>
-        <CCol >
-          <WidgetsGantt />
-        </CCol>
-      </CRow>
-      <CCard>
-        <CCardBody>
+      <CTabs activeTab="drivers">
+        <CNav variant="tabs" className="mb-4">
+          <CNavItem>
+            <CNavLink data-tab="drivers">
+              Motoristas
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink data-tab="vehicles">
+              Veiculos
+            </CNavLink>
+          </CNavItem>
+        </CNav>
 
-        </CCardBody>
-      </CCard>
+        <CTabContent>
+          <CTabPane data-tab="drivers">
+            <StatsPanel />
+          </CTabPane>
+          <CTabPane data-tab="vehicles">
+            <StatsPanel />
+          </CTabPane>
+        </CTabContent>
+      </CTabs>
+
+
       <CTabs activeTab="scale">
-        <CNav variant="tabs">
+        <CNav variant="tabs" className="mb-4">
           <CNavItem>
             <CNavLink data-tab="scale">
               Escala
@@ -49,15 +61,17 @@ const Drivers = () => {
             </CNavLink>
           </CNavItem>
         </CNav>
+
         <CTabContent>
           <CTabPane data-tab="scale">
-            Escala aqui
+            <WidgetsGantt />
           </CTabPane>
           <CTabPane data-tab="worked-hours">
             Horas trabalhadas aqui
           </CTabPane>
         </CTabContent>
       </CTabs>
+
     </>
   )
 }

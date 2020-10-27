@@ -110,7 +110,7 @@ class WidgetsGantt extends React.Component {
             <Column dataField="start" caption="Data Inicial" />
             <Column dataField="end" caption="Data Final" />
 
-            <Toolbar id="barra-superior">
+            <Toolbar >
                 <Item name="collapseAll" />
                 <Item name="expandAll" />
                 <Item name="zoomIn" />

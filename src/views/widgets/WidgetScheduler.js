@@ -8,7 +8,7 @@ import ptMessages from "devextreme/localization/messages/pt.json";
 import { locale, loadMessages } from "devextreme/localization";
 
 const currentDate = new Date(2020, 10, 20);
-const views = ['timelineDay', 'week', ];
+const views = ['timelineDay', 'week'];
 
 class WidgetScheduler extends React.Component {
   constructor(props){
@@ -21,7 +21,7 @@ class WidgetScheduler extends React.Component {
       <Scheduler
         dataSource={data}
         views={views}
-        defaultCurrentView="timelineDay"
+        defaultCurrentView="week"
         defaultCurrentDate={currentDate}
         height={600}
         startDayHour={8} />

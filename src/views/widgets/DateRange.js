@@ -4,6 +4,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker} from 'react-dates';
 
 import moment from 'moment';
+import 'moment/locale/pt-br'
 
 
 class DateRange extends Component {
@@ -13,7 +14,7 @@ class DateRange extends Component {
       startDate : null,
       endDate : null
     }
-    moment.locale(navigator.language)
+      moment.locale('pt-br');
   }
   render() {
     return (

@@ -45,3 +45,16 @@
   border: 0;
   outline: none!important;
 }
+.DateRangePicker {
+  position: relative;
+  display: inline-block;
+  z-index: 999;
+}
+.dx-gantt .dx-gantt-toolbar-wrapper{
+  padding: 0 !important;
+}
+.DateRangePicker .DateInput_input{
+  font-size: 16px;
+  padding: 5px 11px;
+  line-height: 16px;
+}

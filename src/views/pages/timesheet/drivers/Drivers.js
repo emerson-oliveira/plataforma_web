@@ -64,6 +64,7 @@ const Drivers = () => {
             <WidgetsGantt />
           </CTabPane>
           <CTabPane data-tab="worked-hours">
+
           </CTabPane>
         </CTabContent>
       </CTabs>
